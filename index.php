@@ -10,8 +10,8 @@ include 'includes/header.php';
 if(isset($_GET['pagina'])){
 	$pagina = $_GET['pagina'];
 }
-else if(!$conexao){
-	$pagina = 'errobanco';
+else if (!$conexao){
+	$pagina = 'errodb';
 }
 else{
 	$pagina = 'home';
@@ -23,7 +23,7 @@ switch($pagina){
 	case 'editar': include 'views/editar.php'; break;
 	case 'editada': include 'views/editada.php'; break;
 	case 'deletar': include 'views/deletar.php'; break;
-	case 'errobanco': include 'views/errobanco.php'; break;
+	case 'errodb': include 'views/errodb.php'; break;
 	default: include 'views/home.php'; break;
 }
 
